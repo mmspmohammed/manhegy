@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap');
+
+:root { color-scheme: light; --ink: #173b35; --muted: #657873; --green: #176b55; --mint: #e7f4ed; --line: #e1ebe5; --paper: #f7faf8; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: "IBM Plex Sans Arabic", system-ui, sans-serif; }
+a { color: inherit; text-decoration: none; }
+.site-header { min-height: 72px; padding: 0 max(24px, calc((100% - 1040px) / 2)); display: flex; align-items: center; justify-content: space-between; background: #fff; border-bottom: 1px solid var(--line); }
+.brand { color: var(--green); font-size: 1.5rem; font-weight: 700; }
+nav { display: flex; gap: 24px; color: var(--muted); font-size: .95rem; }
+nav a:hover, .text-link:hover { color: var(--green); }
+.container { width: min(100% - 40px, 920px); margin: 48px auto 80px; }
+.page-stack { display: grid; gap: 42px; }
+.card { background: #fff; border: 1px solid var(--line); border-radius: 20px; box-shadow: 0 8px 28px #173b3508; }
+.hero { padding: clamp(28px, 6vw, 56px); background: linear-gradient(135deg, #fff 45%, var(--mint)); }
+h1, h2, h3, p { margin-top: 0; }
+h1 { margin-bottom: 14px; font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.25; }
+h2 { margin-bottom: 0; font-size: 1.65rem; }
+h3 { margin: 4px 0; font-size: 1.25rem; }
+.hero .muted { max-width: 560px; margin-bottom: 26px; font-size: 1.1rem; }
+.eyebrow { margin-bottom: 8px; color: var(--green); font-size: .9rem; font-weight: 600; }
+.muted { color: var(--muted); line-height: 1.8; }
+.button { display: inline-flex; min-height: 46px; align-items: center; justify-content: center; padding: 10px 20px; border: 0; border-radius: 10px; background: var(--green); color: #fff; font: inherit; font-weight: 600; cursor: pointer; }
+.button:hover { background: #105540; }
+.button:disabled { opacity: .65; cursor: wait; }
+.section-heading { display: flex; align-items: end; justify-content: space-between; gap: 16px; margin-bottom: 18px; }
+.progress-label { color: var(--muted); font-size: .9rem; }
+.lesson-list { display: grid; gap: 12px; }
+.lesson-card { display: flex; align-items: center; gap: 18px; padding: 20px; }
+.lesson-number { display: grid; width: 44px; height: 44px; flex: 0 0 44px; place-items: center; border-radius: 50%; background: #f1f4f2; color: var(--muted); font-weight: 700; }
+.lesson-number.active { background: var(--mint); color: var(--green); }
+.lesson-copy { flex: 1; }
+.lesson-copy p { margin-bottom: 0; }
+.lesson-copy .eyebrow { margin-bottom: 2px; }
+.text-link { color: var(--green); font-weight: 600; white-space: nowrap; }
+.auth-card, .complete-card { width: min(100%, 480px); margin: 32px auto; padding: clamp(24px, 5vw, 40px); }
+.auth-card h1, .complete-card h1, .lesson-detail h1 { font-size: 2rem; }
+.form { display: grid; gap: 10px; margin-top: 24px; }
+.form label { margin-top: 8px; font-weight: 600; }
+.form input { min-height: 46px; padding: 10px 12px; border: 1px solid var(--line); border-radius: 9px; font: inherit; }
+.form input:focus { outline: 2px solid #8bc5ac; border-color: var(--green); }
+.form .button { margin-top: 10px; }
+.switch-button { margin-top: 18px; padding: 0; border: 0; background: none; color: var(--green); font: inherit; cursor: pointer; }
+.notice { margin: 18px 0 0; padding: 12px 14px; border-radius: 9px; background: var(--mint); color: var(--ink); }
+.lesson-detail { padding: clamp(24px, 5vw, 48px); }
+.lesson-detail > .eyebrow { margin-top: 30px; }
+.lesson-body { margin: 28px 0; padding: 22px; border-right: 4px solid #8bc5ac; border-radius: 8px; background: var(--paper); line-height: 1.9; }
+.lesson-body h2 { margin-bottom: 10px; font-size: 1.3rem; }
+.lesson-body p { margin-bottom: 0; }
+.complete-card { text-align: center; }
+.success-mark { display: grid; width: 64px; height: 64px; margin: 0 auto 20px; place-items: center; border-radius: 50%; background: var(--mint); color: var(--green); font-size: 2rem; font-weight: 700; }
+.complete-card .button { margin-top: 12px; }
+@media (max-width: 600px) { .site-header { padding: 0 20px; } nav { gap: 14px; font-size: .85rem; } .container { margin-top: 28px; } .lesson-card { flex-wrap: wrap; } .lesson-copy { min-width: calc(100% - 65px); } .lesson-card .text-link { margin-right: 62px; } .section-heading { align-items: start; flex-direction: column; } }
